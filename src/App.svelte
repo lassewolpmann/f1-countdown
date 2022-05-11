@@ -157,6 +157,10 @@
 		font-size: 3rem;
 	}
 
+	.time-text {
+		color: grey;
+	}
+
 	.hard {
 		border: 10px solid white;
 	}
@@ -183,19 +187,19 @@
 <div class='row'>
 	<div class='countdown-time hard'>
 		<span class='time'>{daysUntilNextRace}</span>
-		<span>Days</span>
+		<span class='time-text'>Days</span>
 	</div>
 	<div class='countdown-time medium'>
 		<span class='time'>{hoursUntilNextRace}</span>
-		<span>Hours</span>
+		<span class='time-text'>Hours</span>
 	</div>
 	<div class='countdown-time soft'>
 		<span class='time'>{minutesUntilNextRace}</span>
-		<span>Minutes</span>
+		<span class='time-text'>Minutes</span>
 	</div>
 	<div class='countdown-time wet'>
 		<span class='time'>{secondsUntilNextRace}</span>
-		<span>Seconds</span>
+		<span class='time-text'>Seconds</span>
 	</div>
 </div>
 <div class='row'>
