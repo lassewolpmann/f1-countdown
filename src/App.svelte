@@ -7,10 +7,8 @@
 
 	let timezoneOffset;
 
-	let nextEvent = undefined
-	let nextEventName = undefined
-	let nextEventTrack = undefined
-	let nextEventSessions = []
+	let nextEvent, nextEventName, nextEventTrack;
+	let nextEventSessions = [];
 	
 	const mountTimestamp = new Date().getTime();
 
