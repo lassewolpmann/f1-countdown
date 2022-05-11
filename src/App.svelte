@@ -3,6 +3,8 @@
 
 	import Timer from './components/Timer.svelte';
 	import Button from './components/Button.svelte';
+	import Event from './components/Event.svelte';
+	import Timezone from './components/Timezone.svelte';
 
 	let current = 'Race';
 	const d = new Date();
@@ -74,10 +76,6 @@
 </script>
 
 <style>
-	h1, h4, h5 {
-		text-align: center;
-	}
-
 	div {
 		display: flex;
 		flex-direction: row;
@@ -87,8 +85,7 @@
 	}
 </style>
 
-<h1>{nextEventName}</h1>
-<h4 style="margin-top: -30px; color: grey">{nextEventTrack}</h4>
+<Event eventName={nextEventName} eventTrack={nextEventTrack}/>
 <div>
 	<Timer time={daysUntilNextSession} text={'days'}/>
 	<Timer time={hoursUntilNextSession} text={'hours'}/>
@@ -101,4 +98,4 @@
 	{/each}
 	<Button bind:current={current} session={'Race'} calculateDelta={() => calculateDelta('Race')}/>
 </div>
-<h5 style="margin-top: 100px; color: grey">{new Date(nextSessionTimestamp + timezoneOffset * 1000)}</h5>
+<Timezone timestamp={nextSessionTimestamp} timezoneOffset={timezoneOffset}/>
